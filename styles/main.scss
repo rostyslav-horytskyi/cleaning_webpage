@@ -2,11 +2,25 @@ $header-height: 80px;
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
+  display: flex;
+  // flex-shrink: 1;
+  width: 100%;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background-image: url(../images/the-push-rod-2537318.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-size: 100%;
 }
 
 .header {
@@ -14,14 +28,24 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
-  height: $header-height;
-  background-color: #98fb98;
-  text-shadow: 3px 6px 10px;
+  background-image: url(../images/the-push-rod-2537318.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-attachment: fixed;
+  z-index: 1;
+
+  &__background {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    height: $header-height;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-shadow: 3px 6px 10px;
+  }
 }
 
 .nav {
@@ -31,7 +55,7 @@ body {
     display: flex;
     list-style: none;
     padding: 0;
-    width: 215px;
+    width: 255px;
 
     &--second {
       justify-content: flex-end;
@@ -44,7 +68,8 @@ body {
 
   &__link {
     text-decoration: none;
-    color: #696969;
+    color: #c7c7c7;
+    font-size: 1rem;
     font-family: "Roboto", Arial, sans-serif;
     font-weight: 900;
     transition-duration: 0.5s;
@@ -57,8 +82,8 @@ body {
 }
 
 .logo_title {
-  font-family: 'Pacifico', cursive;
-  color: #006400;
+  font-family: 'Marck Script', cursive;
+  color: #000;
   margin: 0;
 }
 
@@ -75,57 +100,60 @@ body {
 }
 
 .services {
-  height: 550px;
-  background-image: url("../images/clean_photo.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
 
   &__content {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
     padding: 20px;
   }
 
   &__title {
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin: 0 0 18px;
-    color: #98fb98;
+    padding: 0 0 18px;
+    color: #000;
     text-shadow: 3px 6px 10px;
   }
 
   &__blocks {
     display: flex;
+    flex-direction: row;
+    // gap: 70px;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
-    padding: 0 50px;
+    justify-content: center;
+    // padding: 0 50px;
   }
 
   &__wrap {
     display: flex;
     justify-content: center;
-    width: 33%;
+    width: 30%;
+    // height: 100%;
   }
 
   &__item {
-    width: 50%;
-    height: 205px;
+    min-width: 80%;
+    width: 60%;
+    height: 210px;
     border: 1px solid dimgray;
-    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5);
+    // box-shadow: 0 0 20px #ADFF2F;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
     background-color: rgba(255, 255, 255, 0.3);
     padding: 5px;
     margin-bottom: 18px;
-    color: rgba(0, 0, 0, 0.6);
+    color: #000;
     transition-duration: 0.5s;
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.5);
+      // box-shadow: 0 0 30px #7FFF00;
       transform: translateY(-10px);
       transition-duration: 0.5s;
     }
@@ -135,7 +163,6 @@ body {
     width: 85px;
     height: 85px;
     margin: 0 auto;
-    background-color: #98fb98;
     border: 5px solid #000;
     border-radius: 50%;
   }
@@ -144,12 +171,15 @@ body {
 .about {
   display: flex;
   width: 100%;
-  height: 550px;
-  background-color: #f5ec73;
+  background-image: linear-gradient(#fff9ea, #98FB98);
   font-family: 'Roboto', sans-serif;
+  border-top-left-radius: 50% 10%;
+  border-bottom-right-radius: 50% 10%;
+  overflow: hidden;
+  padding: 50px 0;
 
   &__description {
-    width: 50%;
+    min-width: 50%;
     padding-top: 150px;
     padding-left: 20px;
     padding-right: 20px;
@@ -158,46 +188,48 @@ body {
   &__title {
     font-size: 2rem;
     font-weight: bold;
-    color: #696969;
+    color: #000;
     text-transform: uppercase;
+    text-shadow: 3px 6px 10px;
   }
 
   &__text {
     font-size: 1.5rem;
-    color: #696969;
+    color: #000;
   }
 
   &__photo {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: center;
+    margin: auto;
+    min-width: 50%;
+    height: 100%;
     padding: 10px 100px 0 0;
   }
 
   &__image {
-    width: 250px;
-    height: 250px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 40%;
+    max-height: 40%;;
     margin-bottom: 20px;
+    margin-right: 20px;
+    opacity: 0.7;
+    box-shadow: 3px 6px 10px;
   }
 }
 
 .invite {
   display: flex;
-  height: 400px;
-  background-image: url(../images/the-push-rod-2537318.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: 100%;
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin-bottom: 60px;
 
   &__content {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
     padding-top: 50px;
     color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -250,16 +282,18 @@ body {
 .benefits {
   display: flex;
   flex-direction: column;
-  height: 660px;
-  background-color: #65cf53;
+  background-image: linear-gradient(#fff9ea, #98FB98, #fff9ea);
   text-align: center;
-  overflow: none;
+  border-top-left-radius: 50% 10%;
+  padding-bottom: 30px;
+  box-shadow: 0 6px 15px #000;
 
   &__title {
     margin: 0;
     padding: 50px 0;
     font-size: 2.8rem;
     font-weight: bold;
+    text-shadow: 3px 6px 10px;
   }
 
   &__text {
@@ -291,18 +325,20 @@ body {
 .reviews {
   display: flex;
   flex-direction: column;
-  height: 800px;
-  background-color: #f5ec73;
-  padding: 30px 40px 20px;
+  background-color: #fff9ea;
+  padding: 30px 40px 40px;
   text-align: center;
 
   &__title {
-    font-size: 3rem;
+    font-size: 2rem;
+    text-shadow: 3px 6px 10px;
   }
 
   &__content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
   }
 
@@ -313,6 +349,7 @@ body {
     box-shadow: 10px 10px 15px;
     padding: 5px;
     transition-duration: 0.5s;
+    background-color: lightyellow;
 
     &:hover {
       transform: translateY(-20px);
@@ -326,7 +363,7 @@ body {
     height: 120px;
     border: 5px solid #000;
     border-radius: 50%;
-    background-color: #98fb98;
+    background-color: lightgreen;
   }
 
   &__img {
@@ -356,13 +393,15 @@ body {
 
 .contacts {
   text-align: center;
-  height: 650px;
-  background-color: #65cf53;
+  background-color: #fff9ea;
+  background-image: linear-gradient(#fff9ea, #98FB98);
+  padding-bottom: 30px;
 
   &__title {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0;
     padding: 20px 0 60px;
+    text-shadow: 3px 6px 10px;
   }
 
   &__container {
@@ -455,5 +494,106 @@ body {
   &__text {
     color: grey;
     margin-left: 10px;
+  }
+}
+
+@media (max-width: 899px) {
+  .header {
+    &__background {
+      height: $header-height - 35px;
+    }
+  }
+
+  .nav {
+    &__link {
+      font-size: 0.6rem;
+    }
+  }
+
+  .logo_title {
+    font-size: 1rem;
+  }
+
+  .services {
+    &__content {
+      padding: 15px;
+    }
+
+    &__title {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    &__item {
+      font-size: 0.8rem;
+    }
+  }
+
+  .about {
+    &__description {
+      padding-top: 50px;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__text {
+      font-size: 1rem;
+    }
+  }
+
+  .benefits {
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__text {
+      font-size: 1.5rem;
+    }
+  }
+
+  .footer {
+    &__title {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  body {
+    background: #fff9ea;
+  }
+
+  .container {
+    background-color: #fff9ea;
+  }
+
+  .header {
+    &__background {
+      height: $header-height - 40px;
+      background-color: dimgray;
+    }
+  }
+
+  .services {
+    &__content {
+      padding: 10px;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__wrap {
+      height: 50%;
+      width: 50%;
+    }
+  }
+
+  .invite {
+    &__content {
+      color: #000;
+    }
   }
 }
