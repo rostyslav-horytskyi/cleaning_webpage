@@ -4,7 +4,6 @@
 }
 
 body {
-  display: flex;
   margin: 0;
   font-family: "Roboto", sans-serif;
   background-image: url(../images/the-push-rod-2537318.webp);
@@ -46,7 +45,6 @@ body {
   display: flex;
   list-style: none;
   padding: 0;
-  width: 255px;
 }
 .nav__list--second {
   justify-content: flex-end;
@@ -249,7 +247,6 @@ body {
   margin: 0 auto;
   font-size: 1.8rem;
   font-weight: normal;
-  width: 700px;
 }
 .benefits__img {
   margin-right: 20px;
@@ -259,7 +256,6 @@ body {
   justify-content: flex-start;
   text-align: left;
   align-items: center;
-  width: 600px;
   margin: 0 auto;
   padding-top: 30px;
 }
@@ -341,7 +337,6 @@ body {
   text-shadow: 3px 6px 10px;
 }
 .contacts__container {
-  width: 600px;
   margin: 0 auto;
   text-align: left;
 }
@@ -401,7 +396,7 @@ body {
   text-shadow: 3px 3px 10px;
 }
 .footer__social {
-  width: 150px;
+  width: 100px;
 }
 .footer__item {
   display: flex;
@@ -473,9 +468,17 @@ body {
     background-color: #fff9ea;
   }
 
+  .header {
+    position: relative;
+  }
   .header__background {
-    height: 40px;
+    flex-direction: column;
+    height: 120px;
     background-color: dimgray;
+  }
+
+  .nav__link {
+    font-size: 0.88rem;
   }
 
   .services__content {
@@ -485,12 +488,26 @@ body {
     font-size: 1.5rem;
   }
   .services__wrap {
-    height: 50%;
-    width: 50%;
+    width: 100%;
   }
 
   .invite__content {
     color: #000;
+  }
+
+  .about__photo {
+    padding: 0;
+  }
+  .about__image {
+    min-width: 56%;
+  }
+
+  .contacts__contact {
+    margin-left: 10px;
+  }
+
+  .footer__title {
+    display: none;
   }
 }
 
