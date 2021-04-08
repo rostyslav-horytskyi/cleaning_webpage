@@ -10,4 +10,12 @@ $(function() {
     }, 300);
     console.log(event.target);
   });
+
+  $('.form').on('click', function() {
+    $('.form-field').css('display', 'block');
+  });
+
+  $('.close').on('click', function() {
+    $('.form-field').css('display', 'none');
+  });
 });
