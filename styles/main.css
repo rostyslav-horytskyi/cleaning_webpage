@@ -91,6 +91,8 @@ body {
   padding: 0 0 18px;
   color: #000;
   text-shadow: 3px 6px 10px;
+  animation: fadeInDown;
+  animation-duration: 1.5s;
 }
 .services__blocks {
   display: flex;
@@ -104,6 +106,8 @@ body {
   display: flex;
   justify-content: center;
   width: 30%;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
 }
 .services__item {
   min-width: 80%;
@@ -208,9 +212,11 @@ body {
 }
 .invite__arrow {
   margin-left: -60px;
+  animation: shakeX 5s infinite;
 }
 .invite__button {
   background-color: #ff0;
+  background: linear-gradient(to left, #ff0, #ff0 50%, #fff 100%, #ff0 50%);
   border: #ff0;
   border-radius: 10px;
   padding: 20px 60px;
@@ -233,7 +239,7 @@ body {
   background-image: linear-gradient(#fff9ea, #98FB98, #fff9ea);
   text-align: center;
   border-top-left-radius: 50% 10%;
-  padding-bottom: 30px;
+  padding: 20px;
   box-shadow: 0 6px 15px #000;
 }
 .benefits__title {
@@ -280,6 +286,16 @@ body {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+}
+@media (min-width: 1550px) {
+  .reviews__content {
+    grid-template-columns: repeat(4, 270px);
+  }
+}
+@media (max-width: 1250px) {
+  .reviews__content {
+    grid-template-columns: repeat(2, 270px);
+  }
 }
 .reviews__recall {
   width: 270px;
@@ -328,7 +344,7 @@ body {
   text-align: center;
   background-color: #fff9ea;
   background-image: linear-gradient(#fff9ea, #98FB98);
-  padding-bottom: 30px;
+  padding: 20px;
 }
 .contacts__title {
   font-size: 2rem;
@@ -455,6 +471,10 @@ body {
     font-size: 1.5rem;
   }
 
+  .reviews__content {
+    display: grid;
+  }
+
   .footer__title {
     font-size: 1rem;
   }
@@ -493,6 +513,17 @@ body {
 
   .invite__content {
     color: #000;
+  }
+  .invite__button {
+    padding: 15px 20px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+  }
+  .invite__title {
+    font-size: 2rem;
+  }
+  .invite__title_small {
+    font-size: 1.5rem;
   }
 
   .about__photo {

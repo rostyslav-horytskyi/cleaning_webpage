@@ -6,7 +6,6 @@ $header-height: 80px;
 }
 
 body {
-  // display: contents;
   margin: 0;
   font-family: 'Roboto', sans-serif;
   background-image: url(../images/the-push-rod-2537318.webp);
@@ -22,7 +21,6 @@ body {
 }
 
 .header {
-  // display: contents;
   position: sticky;
   top: 0;
   background-image: url(../images/the-push-rod-2537318.webp);
@@ -104,24 +102,25 @@ body {
     padding: 0 0 18px;
     color: #000;
     text-shadow: 3px 6px 10px;
+    animation: fadeInDown;
+    animation-duration: 1.5s;
   }
 
   &__blocks {
     display: flex;
     flex-direction: row;
-    // gap: 70px;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
     justify-content: center;
-    // padding: 0 50px;
   }
 
   &__wrap {
     display: flex;
     justify-content: center;
     width: 30%;
-    // height: 100%;
+    animation: fadeInUp;
+    animation-duration: 1.5s;
   }
 
   &__item {
@@ -129,7 +128,6 @@ body {
     width: 60%;
     height: 210px;
     border: 1px solid dimgray;
-    // box-shadow: 0 0 20px #ADFF2F;
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
     background-color: rgba(255, 255, 255, 0.3);
     padding: 5px;
@@ -139,7 +137,6 @@ body {
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.5);
-      // box-shadow: 0 0 30px #7FFF00;
       transform: translateY(-10px);
       transition-duration: 0.5s;
     }
@@ -242,10 +239,13 @@ body {
 
   &__arrow {
     margin-left: -60px;
+
+    animation: shakeX 5s infinite;
   }
 
   &__button {
     background-color: #ff0;
+    background: linear-gradient(to left, #ff0, #ff0 50%, #fff 100%, #ff0 50%);
     border: #ff0;
     border-radius: 10px;
     padding: 20px 60px;
@@ -270,7 +270,7 @@ body {
   background-image: linear-gradient(#fff9ea, #98FB98, #fff9ea);
   text-align: center;
   border-top-left-radius: 50% 10%;
-  padding-bottom: 30px;
+  padding: 20px;
   box-shadow: 0 6px 15px #000;
 
   &__title {
@@ -285,7 +285,6 @@ body {
     margin: 0 auto;
     font-size: 1.8rem;
     font-weight: normal;
-    // width: 700px;
   }
 
   &__img {
@@ -297,7 +296,6 @@ body {
     justify-content: flex-start;
     text-align: left;
     align-items: center;
-    // width: 600px;
     margin: 0 auto;
     padding-top: 30px;
 
@@ -325,6 +323,14 @@ body {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+
+    @media (min-width: 1550px) {
+      grid-template-columns: repeat(4, 270px);
+    }
+
+    @media (max-width: 1250px) {
+      grid-template-columns: repeat(2, 270px);
+    }
   }
 
   &__recall {
@@ -380,7 +386,7 @@ body {
   text-align: center;
   background-color: #fff9ea;
   background-image: linear-gradient(#fff9ea, #98FB98);
-  padding-bottom: 30px;
+  padding: 20px;
 
   &__title {
     font-size: 2rem;
@@ -390,7 +396,6 @@ body {
   }
 
   &__container {
-    // width: 600px;
     margin: 0 auto;
     text-align: left;
   }
@@ -538,6 +543,12 @@ body {
     }
   }
 
+  .reviews {
+    &__content {
+      display: grid;
+    }
+  }
+
   .footer {
     &__title {
       font-size: 1rem;
@@ -548,7 +559,6 @@ body {
 @media (max-width: 599px) {
   body {
     background: #fff9ea;
-    // z-index: 1;
   }
 
   .container {
@@ -559,8 +569,6 @@ body {
     position: relative;
     &__background {
       flex-direction: column;
-      // justify-content: center;
-      // font-size: 1.5rem;
       height: $header-height + 40px;
       background-color: dimgray;
     }
@@ -571,10 +579,6 @@ body {
       font-size: 0.88rem;
     }
   }
-
-  // .logo_title {
-  //   display: none;
-  // }
 
   .services {
     &__content {
@@ -593,6 +597,20 @@ body {
   .invite {
     &__content {
       color: #000;
+    }
+
+    &__button {
+      padding: 15px 20px;
+      margin-left: 10px;
+      font-size: 1.1rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+
+      &_small {
+        font-size: 1.5rem;
+      }
     }
   }
 

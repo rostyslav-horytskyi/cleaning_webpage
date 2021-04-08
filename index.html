@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="images/Daco_3358878.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Prybyrannya</title>
 </head>
 <body>
@@ -18,9 +20,16 @@
       <div class="header__background">
         <nav class="nav">
           <ul class="nav__list nav__list--first">
-            <li class="nav__item"><a href="#about" class="nav__link">Про нас</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Послуги</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Переваги</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link" data-scroll="#about">
+                Про нас
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link" data-scroll="#benefits">
+                Переваги
+              </a>
+            </li>
           </ul>
         </nav>
     
@@ -30,8 +39,16 @@
     
         <nav class="nav">
           <ul class="nav__list nav__list--second">
-            <li class="nav__item"><a href="#" class="nav__link">Відгуки</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Контакти</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link" data-scroll="#reviews">
+                Відгуки
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link" data-scroll="#contacts">
+                Контакти
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -84,7 +101,7 @@
                 <div class="services__image_wrap">
                   <img class="services__img" src="images/iconfinder_22-Sofa_2.png" alt="">
                 </div>
-                <h2 class="service__item_title">Хімчиска</h2>
+                <h2 class="service__item_title">Хімчистка</h2>
               </div>
             </div>
   
@@ -101,38 +118,42 @@
       </div>
 
       <div class="about" id="about">
-        <div class="about__description">
+        <div class="about__description" data-aos="fade-right">
           <h2 class="about__title">Про компанію</h2>
           <p class="about__text">Компанія “ФАЙНЕ ПРИБИРАННЯ” – клінінгова фірма, яка знає все про ідеальну чистоту. Ми працюємо вже 14 років на українському ринку та зарекомендували себе, як відповідальні підрядники, що надають якісні послуги прибирання.
             Наші працівники постійно вдосконалюються і підвищують кваліфікацію.</p>
         </div>
   
         <div class="about__photo">
-          <img src="images/about_1.webp" alt="" class="about__image">
-          <img src="images/about_2.webp" alt="" class="about__image">
-          <img src="images/about_3.webp" alt="" class="about__image">
-          <img src="images/about_4.webp" alt="" class="about__image">
+          <img src="images/about_1.webp" alt="" class="about__image" data-aos="fade-left">
+          <img src="images/about_2.webp" alt="" class="about__image" data-aos="fade-left">
+          <img src="images/about_3.webp" alt="" class="about__image" data-aos="fade-left">
+          <img src="images/about_4.webp" alt="" class="about__image" data-aos="fade-left">
         </div>
       </div>
   
       <div class="invite">
         <div class="invite__content">
-          <h2 class="invite__title">Запроси чистоту на гостину!</h2>
-          <h3 class="invite__title_small">Зателефонуй, і дізнайся всі подробиці</h3>
+          <h2 class="invite__title" data-aos="fade-down">Запроси чистоту на гостину!</h2>
+          <h3 class="invite__title_small" data-aos="fade-down">Зателефонуй, і дізнайся всі подробиці</h3>
   
-          <div class="invite__nav">
+          <div class="invite__nav" data-aos="fade-down">
             <img src="images/arrow.png" alt="" class="invite__arrow">
-            <a href="#" class="invite__link"><button class="invite__button">Наші контакти</button></a>
+            <a href="#" class="invite__link" data-scroll="#contacts">
+              <button class="invite__button">
+                Наші контакти
+              </button>
+            </a>
           </div>
         </div>
       </div>
   
-      <div class="benefits">
-        <h2 class="benefits__title">Переваги компанії</h2>
-        <p class="benefits__text">Нам варто довіряти, адже ми справжні професіонали у цій справі, переконайтесь самі!</p>
+      <div class="benefits" id="benefits">
+        <h2 class="benefits__title" data-aos="fade-down">Переваги компанії</h2>
+        <p class="benefits__text" data-aos="fade-down">Нам варто довіряти, адже ми справжні професіонали у цій справі, переконайтесь самі!</p>
   
         <div class="benefits__discription">
-          <div class="benefits__description_block">
+          <div class="benefits__description_block" data-aos="fade-left">
             <img src="images/clock.webp" alt="" class="benefits__img">
   
             <div class="benefits__about">
@@ -141,7 +162,7 @@
             </div>
           </div>
   
-          <div class="benefits__description_block">
+          <div class="benefits__description_block" data-aos="fade-left">
             <img src="images/pil.webp" alt="" class="benefits__img">
   
             <div class="benefits__about">
@@ -150,7 +171,7 @@
             </div>
           </div>
   
-          <div class="benefits__description_block">
+          <div class="benefits__description_block" data-aos="fade-left">
             <img src="images/wallet.webp" alt="" class="benefits__img">
   
             <div class="benefits__about">
@@ -161,11 +182,11 @@
         </div>
       </div>
   
-      <div class="reviews">
-        <h2 class="reviews__title">Відгуки наших клієнтів</h2>
+      <div class="reviews" id="reviews">
+        <h2 class="reviews__title" data-aos="fade-down">Відгуки наших клієнтів</h2>
   
         <div class="reviews__content">
-          <div class="reviews__recall">
+          <div class="reviews__recall" data-aos="fade-down">
             <div class="reviews__img_wrap">
               <img src="images/iconfinder_users-16_984113.svg" alt="" class="reviews__img">
             </div>
@@ -182,7 +203,7 @@
             <p class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quibusdam!</p>
           </div>
   
-          <div class="reviews__recall">
+          <div class="reviews__recall" data-aos="fade-down">
             <div class="reviews__img_wrap">
               <img src="images/iconfinder_users-2_984102.svg" alt="" class="reviews__img">
             </div>
@@ -199,7 +220,7 @@
             <p class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quibusdam!</p>
           </div>
   
-          <div class="reviews__recall">
+          <div class="reviews__recall" data-aos="fade-down">
             <div class="reviews__img_wrap">
               <img src="images/iconfinder_users-16_984113.svg" alt="" class="reviews__img">
             </div>
@@ -216,7 +237,7 @@
             <p class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quibusdam!</p>
           </div>
   
-          <div class="reviews__recall">
+          <div class="reviews__recall" data-aos="fade-down">
             <div class="reviews__img_wrap">
               <img src="images/iconfinder_users-2_984102.svg" alt="" class="reviews__img">
             </div>
@@ -235,11 +256,11 @@
         </div>
       </div>
   
-      <div class="contacts">
-        <h2 class="contacts__title">Зв'язатися з нами</h2>
+      <div class="contacts" id="contacts">
+        <h2 class="contacts__title" data-aos="fade-down">Зв'язатися з нами</h2>
   
         <div class="contacts__container">
-          <div class="contacts__contact">
+          <div class="contacts__contact" data-aos="fade-down">
             <img src="images/iconfinder_Clock_Filled_657915.svg" alt="" class="contacts__img">
   
             <div class="contacts__description">
@@ -248,7 +269,7 @@
             </div>
           </div>
   
-          <div class="contacts__contact">
+          <div class="contacts__contact" data-aos="fade-down">
             <img src="images/iconfinder_mail_287692.svg" alt="" class="contacts__img">
   
             <div class="contacts__description">
@@ -257,7 +278,7 @@
             </div>
           </div>
   
-          <div class="contacts__contact">
+          <div class="contacts__contact" data-aos="fade-down">
             <img src="images/iconfinder_21_Media_social_website_phone_2657555.svg" alt="" class="contacts__img">
   
             <div class="contacts__description">
@@ -266,7 +287,7 @@
             </div>
           </div>
   
-          <div class="contacts__contact">
+          <div class="contacts__contact" data-aos="fade-down">
             <img src="images/iconfinder__web_Internet_network_www_communication_global_worldwide_4213462.svg" alt="" class="contacts__img">
   
             <div class="contacts__description">
@@ -307,5 +328,14 @@
       </div>
     </footer>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      delay: 400,
+    });
+  </script>
 </body>
 </html>
