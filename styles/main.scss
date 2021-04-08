@@ -17,7 +17,6 @@ body {
 
 .container {
   background-color: rgba(0, 0, 0, 0.4);
-  // overflow-y: scroll;
 }
 
 .header {
@@ -87,15 +86,15 @@ body {
   margin: 0;
 }
 
-// .main {
-//   overflow: hidden;
-// }
-
 .services {
   &__content {
     width: 100%;
     height: 100%;
     padding: 20px;
+  }
+
+  &__img {
+    width: 50px;
   }
 
   &__title {
@@ -111,33 +110,52 @@ body {
   }
 
   &__blocks {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 280px);
+
+    @media (max-width: 1120px) {
+      grid-template-columns: repeat(4, 220px);
+      font-size: 1rem;
+    }
+
+    @media (max-width: 899px) {
+      grid-template-columns: repeat(2, 280px);
+    }
+
+    @media (max-width: 599px) {
+      grid-template-columns: repeat(1, calc(100vw - 20px));
+    }
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
     justify-content: center;
+    width: 100%;
+    flex-shrink: 0;
   }
 
   &__wrap {
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: 100%;
     animation: fadeInUp;
     animation-duration: 1.5s;
   }
 
   &__item {
-    min-width: 80%;
-    width: 60%;
-    height: 210px;
+    width: 80%;
+    height: 178px;
     border: 1px solid dimgray;
+    border-radius: 20px;
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
     background-color: rgba(255, 255, 255, 0.3);
     padding: 5px;
     margin-bottom: 18px;
     color: #000;
     transition-duration: 0.5s;
+
+    &_title {
+      font-size: 1.2rem;
+    }
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.5);
@@ -147,8 +165,8 @@ body {
   }
 
   &__image_wrap {
-    width: 85px;
-    height: 85px;
+    width: 65px;
+    height: 65px;
     margin: 0 auto;
     border: 5px solid #000;
     border-radius: 50%;
@@ -161,7 +179,6 @@ body {
   font-family: 'Roboto', sans-serif;
   border-top-left-radius: 50% 10%;
   border-bottom-right-radius: 50% 10%;
-  // overflow: hidden;
   padding: 50px 0;
 
   &__description {
@@ -273,6 +290,7 @@ body {
   flex-direction: column;
   background-image: linear-gradient(#fff9ea, #98FB98, #fff9ea);
   text-align: center;
+  justify-content: center;
   border-top-left-radius: 50% 10%;
   padding: 20px;
   box-shadow: 0 6px 15px #000;
@@ -297,8 +315,9 @@ body {
 
   &__description_block {
     display: flex;
-    justify-content: flex-start;
-    text-align: left;
+    flex-direction: column;
+    text-align: centr;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     padding-top: 30px;
@@ -400,15 +419,14 @@ body {
   }
 
   &__container {
-    margin: 0 auto;
     text-align: left;
   }
 
   &__contact {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     margin-bottom: 60px;
+    margin-left: 40px;
 
     &:last-child {
       margin-bottom: 0;
@@ -594,6 +612,14 @@ body {
   &:hover {
     box-shadow: none;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 1120px) {
+  .services {
+    &__item_title {
+      font-size: 1rem;
+    }
   }
 }
 
