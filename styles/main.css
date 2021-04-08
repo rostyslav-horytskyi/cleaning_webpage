@@ -15,6 +15,7 @@ body {
 
 .container {
   background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
 }
 
 .header {
@@ -531,6 +532,10 @@ body {
   }
   .about__image {
     min-width: 56%;
+  }
+
+  .reviews__content {
+    grid-template-columns: repeat(auto-fill, 270px);
   }
 
   .contacts__contact {
